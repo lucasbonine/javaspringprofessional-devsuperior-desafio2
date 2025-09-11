@@ -1,36 +1,38 @@
 -- ===========================
--- tabela de categorias
+-- tabela de categorias (2 categorias)
 -- ===========================
-insert into tb_categoria(descricao) values ('Esporte');
-insert into tb_categoria(descricao) values ('Arte');
-insert into tb_categoria(descricao) values ('Tecnologia');
+INSERT INTO tb_categoria (descricao) VALUES ('Curso');
+INSERT INTO tb_categoria (descricao) VALUES ('Oficina');
 
 -- ===========================
--- tabela de atividades
+-- tabela de atividades (2 atividades)
 -- ===========================
-insert into tb_atividade(nome, descricao, preco, categoria_id) values ('Futebol', 'Treino de futebol', 50.0, 1);
-insert into tb_atividade(nome, descricao, preco, categoria_id) values ('Pintura', 'Aula de pintura em tela', 80.0, 2);
-insert into tb_atividade(nome, descricao, preco, categoria_id) values ('Programação Java', 'Curso de Java básico', 120.0, 3);
+INSERT INTO tb_atividade (nome, descricao, preco, categoria_id) VALUES ('Curso de HTML', 'Aprenda HTML de forma prática', 80.00, 1);
+INSERT INTO tb_atividade (nome, descricao, preco, categoria_id) VALUES ('Oficina de Github', 'Controle versões de seus projetos', 50.00, 2);
 
 -- ===========================
--- tabela de participantes
+-- tabela de participantes (4 participantes)
 -- ===========================
-insert into tb_participante (nome, email) values ('Lucas', 'lucas@email.com');
-insert into tb_participante (nome, email) values ('Ana', 'ana@email.com');
-insert into tb_participante (nome, email) values ('Pedro', 'pedro@email.com');
+INSERT INTO tb_participante (nome, email) VALUES ('José Silva', 'jose@gmail.com');
+INSERT INTO tb_participante (nome, email) VALUES ('Tiago Faria', 'tiago@gmail.com');
+INSERT INTO tb_participante (nome, email) VALUES ('Maria do Rosário', 'maria@gmail.com');
+INSERT INTO tb_participante (nome, email) VALUES ('Teresa Silva', 'teresa@gmail.com');
 
 -- ===========================
--- tabela de blocos
+-- tabela de blocos (3 blocos)
 -- ===========================
-insert into tb_bloco (inicio, fim, atividade_id) values ('2025-09-10T08:00:00', '2025-09-10T12:00:00', 1);
-insert into tb_bloco (inicio, fim, atividade_id) values ('2025-09-10T13:00:00', '2025-09-10T17:00:00', 2);
-insert into tb_bloco (inicio, fim, atividade_id) values ('2025-09-10T18:00:00', '2025-09-10T22:00:00', 3);
+INSERT INTO tb_bloco (inicio, fim, atividade_id) VALUES ('2017-09-25 08:00:00', '2017-09-25 11:00:00', 1);
+INSERT INTO tb_bloco (inicio, fim, atividade_id) VALUES ('2017-09-25 14:00:00', '2017-09-25 18:00:00', 2);
+INSERT INTO tb_bloco (inicio, fim, atividade_id) VALUES ('2017-09-26 08:00:00', '2017-09-26 11:00:00', 1);
 
 -- ===========================
--- tabela de relação participantes x atividades (n:n)
+-- tabela de relação participantes x atividades
 -- ===========================
-insert into tb_participantes_atividades (participante_id, atividade_id) values (1, 1);
-insert into tb_participantes_atividades (participante_id, atividade_id) values (1, 3);
-insert into tb_participantes_atividades (participante_id, atividade_id) values (2, 2);
-insert into tb_participantes_atividades (participante_id, atividade_id) values (3, 1);
-insert into tb_participantes_atividades (participante_id, atividade_id) values (3, 3);
+INSERT INTO tb_participantes_atividades (participante_id, atividade_id) VALUES (1, 1);
+INSERT INTO tb_participantes_atividades (participante_id, atividade_id) VALUES (1, 2);
+INSERT INTO tb_participantes_atividades (participante_id, atividade_id) VALUES (2, 1);
+INSERT INTO tb_participantes_atividades (participante_id, atividade_id) VALUES (2, 2);
+INSERT INTO tb_participantes_atividades (participante_id, atividade_id) VALUES (3, 1);
+INSERT INTO tb_participantes_atividades (participante_id, atividade_id) VALUES (3, 2);
+INSERT INTO tb_participantes_atividades (participante_id, atividade_id) VALUES (4, 1);
+INSERT INTO tb_participantes_atividades (participante_id, atividade_id) VALUES (4, 2);
